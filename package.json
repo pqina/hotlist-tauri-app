@@ -1,0 +1,30 @@
+{
+    "private": true,
+    "name": "hotlist-tauri-app",
+    "version": "0.0.0",
+    "type": "module",
+    "website": "https://pqina.nl/hotlist",
+    "license": "MIT",
+    "author": {
+        "name": "Rik Schennink at PQINA"
+    },
+    "scripts": {
+        "tauri": "tauri",
+        "dev": "vite dev & tauri dev",
+        "clean": "rm -rf ./dist",
+        "build-view": "npm run clean && vite build",
+        "build": "npm run build-view && tauri build --target universal-apple-darwin",
+        "build-debug": "npm run build-view && tauri build --target universal-apple-darwin --debug",
+        "ship": "set -o allexport; source .env; set +o allexport && npm run build-view && tauri build --target universal-apple-darwin",
+        "ship-verbose": "set -o allexport; source .env; set +o allexport && npm run build-view && tauri build --target universal-apple-darwin --verbose",
+        "icon": "tauri icon src-tauri/icons/icon.png",
+        "dmg": "./create_dmg.sh"
+    },
+    "devDependencies": {
+        "@tauri-apps/cli": "^1.5.6",
+        "vite": "^4.0.3"
+    },
+    "dependencies": {
+        "@tauri-apps/api": "^1.5.1"
+    }
+}

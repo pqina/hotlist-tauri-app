@@ -1,0 +1,116 @@
+{
+    "build": {
+        "beforeDevCommand": "",
+        "beforeBuildCommand": "",
+        "devPath": "http://localhost:5175/",
+        "distDir": "../dist",
+        "withGlobalTauri": true
+    },
+    "package": {
+        "productName": "Hotlist",
+        "version": "0.0.24"
+    },
+    "tauri": {
+        "allowlist": {
+            "all": false,
+            "globalShortcut": {
+                "all": true
+            },
+            "dialog": {
+                "all": false,
+                "ask": true,
+                "message": true
+            },
+            "http": {
+                "all": false,
+                "request": true,
+                "scope": ["https://**"]
+            },
+            "fs": {
+                "readFile": true,
+                "writeFile": true,
+                "createDir": true,
+                "exists": true,
+                "scope": ["$APP", "$APP/**", "$APPDATA", "$APPDATA/**", "$RESOURCE/**"]
+            },
+            "process": {
+                "all": false,
+                "exit": true
+            },
+            "shell": {
+                "all": false,
+                "open": true
+            },
+            "window": {
+                "setSize": true,
+                "setPosition": true,
+                "hide": true,
+                "show": true,
+                "setFocus": true,
+                "setAlwaysOnTop": true
+            }
+        },
+        "bundle": {
+            "active": true,
+            "category": "DeveloperTool",
+            "copyright": "PQINA",
+            "deb": {
+                "depends": []
+            },
+            "externalBin": [],
+            "icon": [
+                "icons/32x32.png",
+                "icons/128x128.png",
+                "icons/128x128@2x.png",
+                "icons/icon.icns",
+                "icons/icon.ico"
+            ],
+            "identifier": "pqina.hotlist",
+            "longDescription": "",
+            "macOS": {
+                "minimumSystemVersion": "10.15",
+                "entitlements": "macos/entitlements.plist",
+                "exceptionDomain": "",
+                "frameworks": [],
+                "providerShortName": "JYZ34KPFA9",
+                "signingIdentity": null
+            },
+            "resources": ["resources/*"],
+            "shortDescription": "",
+            "targets": "all",
+            "windows": {
+                "certificateThumbprint": null,
+                "digestAlgorithm": "sha256",
+                "timestampUrl": ""
+            }
+        },
+        "security": {
+            "csp": null
+        },
+        "updater": {
+            "active": false
+        },
+        "macOSPrivateApi": true,
+        "windows": [
+            {
+                "width": 440,
+                "height": 400,
+                "title": "Hotlist",
+                "visible": false,
+                "focus": true,
+                "fullscreen": false,
+                "resizable": false,
+                "fileDropEnabled": false,
+                "alwaysOnTop": true,
+                "decorations": false,
+                "transparent": true,
+                "hiddenTitle": true
+            }
+        ],
+        "systemTray": {
+            "iconPath": "resources/icon_edit_Template@3x.png",
+            "iconAsTemplate": true,
+            "menuOnLeftClick": false
+        }
+    }
+}

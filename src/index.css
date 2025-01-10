@@ -1,0 +1,92 @@
+:root {
+    /* web styles */
+    --font-size: 16;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+        Arial, sans-serif;
+    --font-family-monospace: Input Mono, Monaco, Consolas, Lucida Console, Liberation Mono,
+        monospace;
+
+    /* Apply default styles */
+    font-family: var(--font-family-sans-serif);
+    font-size: calc(var(--font-size) * 1px);
+    line-height: calc(var(--font-size) * 1.5px);
+    font-weight: 400;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+html,
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+html {
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    /* A fixed height prevents scroll flickering, assuming 1000px is enough for now */
+    height: 1000px;
+}
+
+body {
+    height: 100%;
+
+    /* TODO: use shadow size */
+    padding: 16px;
+}
+
+.Hotlist {
+    /* default theme */
+    --color-text: 0, 0, 0;
+    --color-background: 255, 255, 255;
+
+    /* app page style */
+    --page-shadow-size: 8;
+    --page-shadow-color: 0, 0, 0;
+    --page-shadow-opacity: 0.1;
+    --page-border-radius: 10;
+    --page-padding: 16;
+    --page-offset-x: 0;
+
+    /* todo item styles */
+    --todo-padding: 16;
+
+    /* checkbox styles */
+    --checkbox-size: 20;
+    --checkbox-border-radius: 4;
+
+    /* text input styles */
+    --input-border-radius: 4;
+
+    /* color picker styles */
+    --color-picker-size: 28;
+
+    /* transition props to switch between themes */
+    --theme-transition: 0.2s ease-in-out;
+}
+
+.Hotlist[data-theme='light'] {
+    --color-text: 0, 0, 0;
+    --color-background: 255, 255, 255;
+    --color-strength: 1;
+}
+
+.Hotlist[data-theme='dim'] {
+    --color-text: 255, 255, 255;
+    --color-background: 44, 44, 50;
+    --color-strength: 1.5;
+}
+
+.Hotlist[data-theme='dark'] {
+    --color-text: 255, 255, 255;
+    --color-background: 25, 23, 23;
+    --color-strength: 1.5;
+}
