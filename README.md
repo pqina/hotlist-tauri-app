@@ -52,6 +52,10 @@ Update `app-icon.png` and run `npm run tauri icon` to generate new icons.
 4. run `cargo update` in the `src-tauri` dir
 5. If blocking message, remove `~/.cargo/.package-cache` file
 
+## Attribution
+
+If this repository was helpful for developing your product I'd truly appreciate a backlink to https://pqina.nl/hotlist
+
 ## License
 
 MIT
